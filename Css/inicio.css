@@ -1,0 +1,525 @@
+:root{
+    --fondo:rgb(39, 25, 22);
+    --secundario:#E06E57;
+    --terciario:#35211d;
+    --letra:#F3F2F1;
+    --rojoO:rgb(141, 37, 16);
+    --rojo:#E22600;
+    --amarillo:#c9c501;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--letra);
+    text-decoration: none;
+}
+i{
+    
+    transition: .5s all ease-in-out
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color: var(--fondo);
+    overflow-x: hidden;
+}
+
+h2{
+    font-size: 2em;
+}
+
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-track{
+    background-color: var(--secundario);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--fondo);
+    border-radius: 20px;
+    border: 2px solid var(--secundario);
+}
+
+
+.sideNav{
+    position: fixed ;
+    left: -13vw;
+    width: 20vw;
+    height: 100vh;
+    background-color: var(--secundario) ;
+    z-index: 2000;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.navActive{
+    left: 0;
+}
+
+.titleNav{
+    background-color: var(--secundario);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkContainer{
+    display: flex;
+    flex-direction: column;
+}
+nav i{
+    font-size: 1.5em;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.linkContainer a{
+    padding: 20px 10px 20px 20px;
+    transition: cubic-bezier(0.77, 0, 0.175, 1) .4s ;
+    display: flex;
+    justify-content: space-between;
+}
+.linkContainer a:hover{
+    background-color: var(--rojoO);
+}
+
+
+.presentacion{
+    width:75vw;
+    height: 100vh;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentacion img{
+    background-image: linear-gradient(to top, var(--secundario) 0%, var(--terciario) 100%);
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+
+.infoPresentacion{
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.presentacionRedes{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    gap: 30px;
+}
+.presentacionRedes i{
+    font-size: 2em;
+    transition: cubic-bezier(0.07 , 0.82, 0.165, 1) 1s;
+    color: var(--secundario);
+}
+.presentacionRedes i:hover{
+    transform: scale(1.2);
+    color: var(--amarillo);
+}
+
+.Cv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+
+    padding: 5px 15px;
+    background-color: var(--secundario);
+    border-radius: 5px;
+
+    transition: .5s all ease-in-out;
+}
+.Cv i{
+    color: var(--letra);
+    font-size: 1em;
+}
+.Cv:hover i{
+    transform: translateX(5px);
+}
+
+
+.perfil{
+    width:80vw;
+    margin: 0 auto 30px;
+}
+.conocimientos h3{
+    margin: 50px auto;
+}
+
+li{
+    list-style: none;
+}
+.ingles{
+    display: inline;
+    position: relative;
+}
+.ingles::after{
+    content: "";
+    position: absolute;
+    background-color: var(--amarillo);
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -5px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.ingles:hover::after{
+    width: 100%;
+}
+
+.ingles:hover *{
+    color: var(--amarillo);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+
+
+.habilidad{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    filter: saturate(0);
+    cursor: pointer;
+    
+    overflow: hidden;
+}
+.habilidad img{
+    width: 150px;
+    min-height: 150px;
+    object-fit: scale-down;
+}
+
+.habilidad:hover{
+    overflow:visible;
+    padding: 5px;
+    filter: saturate(1);
+}
+
+
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tecnologias h3{
+    position: relative;
+
+}
+.tecnologias h3::after{
+    content: "";
+    position: absolute;
+    background-color: var(--secundario);
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -5px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.tecnologias:hover h3::after{
+    width: 100%;
+}
+
+.habilidadesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.hBlandas{
+    position: relative;
+}
+.diploma{
+    position: absolute;
+    top: 25px;
+    left: -150px;
+    width: 150px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.diploma a{
+    text-decoration: underline;
+    text-decoration-color: var(--amarillo);
+    font-size: .8em;
+}
+.hBlandas:hover .diploma{
+    left: 150px;
+}
+
+
+
+
+
+
+.portafolio{
+    width:90vw;
+    padding: 0 0 0 20px;
+    margin-left: 7vw;
+}
+
+
+.proyectosContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+.proyecto{
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.proyecto img{
+    width: 400px;
+    height: 400px;
+    object-fit:cover;
+}
+
+.proyectoDef{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 20px 0;
+    top: 0;
+    left: -1000px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.proyecto:hover img{
+    filter:brightness(.4) blur(2px);
+}
+.proyecto:hover .proyectoDef{
+    left: 0;
+}
+
+.linkGithub{
+    padding: 5px 15px;
+    background-color: var(--secundario);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.linkGithub:hover i{
+    transform: translateX(5px);
+}
+.linkDemo{
+    padding: 5px 15px;
+    background-color: var(--secundario);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.linkDemo:hover i{
+    transform: translateX(5px);
+}
+
+
+
+
+.contacto{
+    width:80vw;
+    margin: 200px auto auto auto;
+}
+
+.metodosContacto{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.metodosContacto a{
+    text-decoration: underline;
+}
+.redContacto{
+    background-color: var(--secundario);
+    border-radius: 7px;
+    min-width: 350px;
+    padding: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redContacto div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.redContacto *{
+    font-size: 1.1em;
+}
+.redContacto i{
+    font-size: 2em;
+    color: var(--terciario);
+}
+
+
+footer{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--terciario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+
+
+/* Responsive */
+
+
+@media (max-width:900px) {
+    .sideNav{
+        width: 30vw;
+        left: -23vw;
+    }
+
+    .presentacion{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 10em;
+    }
+    .presentacion img{
+        margin-top: 5em;
+    }
+
+    .perfil p{
+        text-align: center;
+    }
+    .perfil{
+        width: 65vw;
+    }
+
+    .infoPresentacion{
+        max-width: 65vw;
+        align-items: center;
+    }
+    .infoPresentacion p{
+        text-align: center;
+    }
+    
+    .perfil h2{
+        text-align: center;
+    }
+    .portafolio h2{
+        text-align: center;
+    }
+    .contacto h2{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px){
+    .sideNav{
+        left: -20vw;
+    }
+    .navActive{
+        left: 0px;
+    }
+}
+
+@media (max-width:450px){
+    .sideNav{
+        width: 100vw;
+        height: 3.5em;
+        padding: 0 1em;
+        left: 0;
+        gap: 0;
+        overflow: hidden;
+    }
+    
+    .linkContainer{
+        position: absolute;
+        top: 4em;
+        width: 100vw;
+    }
+    .linkContainer a{
+        padding: 20px 50px 20px 20px;
+    }
+    .navActive{
+        height: 100vh;
+    }
+
+
+    .presentacion{
+        height: auto;
+        width: 100vw;
+        padding: 2em;
+    }
+    .infoPresentacion{
+        max-width: 100vw;
+        margin: 0;
+    }
+    .infoPresentacion h2{
+        text-align: center;
+    }
+    .presentacion .foto{
+        margin-top: 6vh;
+    }
+
+
+    .perfil{
+        width: 100vw;
+        padding: 30px;
+    }
+    .habilidadesContainer{
+        flex-direction: column;
+    }
+
+    
+    .portafolio{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+}

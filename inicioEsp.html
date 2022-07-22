@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Gongora - Portafolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Css/inicio.css">
+</head>
+
+<body>
+
+    <main id="inicioApp">
+        <nav :class="['sideNav', active]">
+            <div class="titleNav">
+                <h2>OG</h2>
+                <i :class="['fa-solid', menuIcon]" @click="Menu"></i>
+            </div>
+
+            <div class="linkContainer">
+                <a href="#home">Home <i class="fa-solid fa-house-chimney"></i></a>
+                <a href="#perfil">Perfil <i class="fa-solid fa-user"></i></a>
+                <a href="#portafolio">Proyectos <i class="fa-solid fa-briefcase"></i></a>
+                <a href="#contacto">Contacto <i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </nav>
+
+
+        <div class="presentacion" id="home">
+            
+            <img src="./img/OmarGongora2.png" alt="Foto de omar gongora" data-aos="fade-right" data-aos-duration="2000">
+
+            <div class="infoPresentacion" data-aos="fade-left" data-aos-duration="2000">
+                <h1>OMAR GONGORA</h1>
+                <h2>Fullstack Developer</h2>
+                <p>Actualmente estudiante de programación y amante del mundo de la tecnología. Tengo un perfil
+                    proactivo, con una gran facilidad para adaptarme a nuevos entornos y para el trabajo en equipo.
+                    Cuento con una amplia disponibilidad horaria, puntualidad y paciencia. Me encuentro en búsqueda de
+                    un trabajo que aporte a mi desarrollo y me permita seguir sumando conocimientos
+                </p>
+                <div class="presentacionRedes">
+                    <a href="https://www.instagram.com/omrg_/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/OmarGongora" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/omar-gongora-23b8bb221/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="./img/Omar Gongora Cv.pdf" class="Cv" target="_blank">Curriculum <i
+                            class="fa-solid fa-angle-right"></i> </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="perfil" id="perfil">
+            <h2>Sobre Mi</h2>
+            <p data-aos="fade-right" data-aos-duration="500">Tengo 20 años, nací en Argentina y vivo en el barrio de
+                Nueva Pompeya. <br>
+                Siempre me apasioné por la tecnología y llevo poco más de un año incursionando en la programación,
+                estudiando a partir de diferentes medios, gracias a los cuales llegue a construir los siguientes
+                conocimientos
+            </p>
+
+            <div class="conocimientos">
+
+                <h3 data-aos="fade-right" data-aos-duration="500">Habilidades</h3>
+
+                <h4>Idiomas</h4>
+                    <ul>
+                        <li>Español - Nativo</li>
+                        <li class="ingles">
+                            <a href="./img/DiplomaHabilidadesBlandasAccenture.pdf" target="_blank">Ingles - B2 <i
+                                    class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+
+                    <div class="conocimientosContainer">
+
+                        <div class="tecnologias">
+
+                            <h3>Frontend</h3>
+
+                            <div class="habilidadesContainer">
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1000">
+                                    <img src="./img/htmlLogo.png" alt="Logo de html">
+                                    <h4>Html5</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1500">
+                                    <img src="./img/cssLogo.png" alt="Logo de css">
+                                    <h4>Css3</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="2000">
+                                    <img src="./img/bootstrapLogo.png" alt="Logo de bootstrap">
+                                    <h4>Bootstrap5</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="2500">
+                                    <img src="./img/javascriptLogo.png" alt="Logo de javascript">
+                                    <h4>Javascript</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="3000">
+                                    <img src="./img/vueLogo.png" alt="Logo de vue">
+                                    <h4>VueJs</h4>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tecnologias">
+
+                            <h3>Backend</h3>
+
+                            <div class="habilidadesContainer">
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1000">
+                                    <img src="./img/mySqlLogo.png" alt="Logo de MySql">
+                                    <h4>MySql</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1500">
+                                    <img src="./img/javaLogo.png" alt="Logo de java">
+                                    <h4>Java</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="2000">
+                                    <img src="./img/springBootLogo.png" alt="Logo de springboot">
+                                    <h4>SpringBoot</h4>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tecnologias">
+
+                            <h3>Extras</h3>
+
+                            <div class="habilidadesContainer">
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1000">
+                                    <img src="./img/gitLogo.png" alt="Logo de git">
+                                    <h4>Git</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="1500">
+                                    <img src="./img/gitHubLogo.png" alt="Logo de github">
+                                    <h4>Github</h4>
+                                </div>
+
+                                <div class="habilidad" data-aos="fade-down" data-aos-duration="2000">
+                                    <img src="./img/photoshopLogo.png" alt="Logo de photoshop">
+                                    <h4>Photoshop</h4>
+                                </div>
+
+                                <div class="habilidad hBlandas" data-aos="fade-down" data-aos-duration="2500">
+                                    <img src="./img/habilidadesBlandas.png" alt="Habilidades Blandas">
+                                    <div class="diploma">
+                                        <h4>Habilidades Blandas</h4>
+                                        <a href="./img/DiplomaHabilidadesBlandasAccenture.pdf" target="_blank">Curso
+                                            habilidades blandas Accenture</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="portafolio" id="portafolio">
+
+            <h2>Portafolio</h2>
+
+
+            <div class="proyectosContainer">
+                <div class="proyecto" data-aos="zoom-in">
+                    <img src="./img/proyectoIntegradorFrontendCodoACodo.JPG"
+                        alt="Imagen del proyecto integrador frontend de codo a codo">
+                    <div class="proyectoDef">
+                        <h4>Codo a Codo</h4>
+                        <p>Proyecto integrador de Frontend, curso codo a codo</p>
+                        <a href="https://github.com/OmarGongora/Integrador-Frontend-Codo-a-codo" target="_blank"
+                            class="linkGithub">Ver el codigo <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="https://integrador-frontend-omar-gongora.netlify.app/" target="_blank"
+                            class="linkDemo">Ver demo <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="proyecto" data-aos="zoom-in">
+                    <img src="./img/portafolio.JPG"
+                        alt="Imagen del proyecto integrador frontend de codo a codo">
+                    <div class="proyectoDef">
+                        <h4>Portafolio</h4>
+                        <p>Portafolio personal para exponerme mi trabajo</p>
+                        <a href="https://github.com/OmarGongora/portafolio" target="_blank"
+                            class="linkGithub">Ver el codigo <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="https://portafolio--omar-gongora.netlify.app/" target="_blank"
+                            class="linkDemo">Ver demo <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="proyecto" data-aos="zoom-in">
+                    <img src="./img/paginaFugazz.JPG" alt="Pagina web de la banda Fugazz">
+                    <div class="proyectoDef">
+                        <h4>Fugazz Web</h4>
+                        <p>Pagina web de la banda Fugazz</p>
+                        <a href="" target="_blank" class="linkGithub">Ver el codigo <i
+                                class="fa-solid fa-angle-right"></i></a>
+                        <a href="https://fugazz-v2-prueba.netlify.app/" target="_blank" class="linkDemo">Ver demo <i
+                                class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="proyecto" data-aos="zoom-in">
+                    <img src="./img/Ta-Te-Ti.JPG" alt="Imagen proyecto juego ta te ti">
+                    <div class="proyectoDef">
+                        <h4>Ta-Te-Ti</h4>
+                        <p>Recreacion del juego Ta Te Ti</p>
+                        <a href="https://github.com/OmarGongora/Prueba-Ta-Te-Ti" target="_blank" class="linkGithub">Ver
+                            el codigo <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="https://ta-te-ti-omargongora.netlify.app/" target="_blank" class="linkDemo">Ver
+                            demo <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contacto" id="contacto">
+
+            <h2>Contacto</h2>
+
+            <div class="metodosContacto">
+
+                <div class="mail redContacto">
+                    <div>
+                        <i class="fa-solid fa-envelope-open"></i>
+                        <h3>Contactame por Mail</h3>
+                    </div>
+                    <a href="mailto:omar.gongora03@gmail.com">omar.gongora03@gmail.com</a>
+                </div>
+
+                <div class="wApp redContacto">
+                    <div>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h3>Contactame por WhatsApp</h3>
+                    </div>
+
+                    <a href="https://wa.me/541154947680" target="_blank">+54 11-9454-7680</a>
+                </div>
+
+                <div class="linkedin redContacto">
+                    <div>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h3>Contactame por Linkedin</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/omar-gongora-23b8bb221/" target="_blank">Omar Gongora</a>
+                </div>
+
+                <div class="instagram redContacto">
+                    <div>
+                        <i class="fa-brands fa-instagram"></i>
+                        <h3>Contactame por Instagram</h3>
+                    </div>
+                    <a href="https://www.instagram.com/omrg_/" target="_blank">@omrg_</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© Omar Jorge Gongora Calventos. All rights reserved</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
