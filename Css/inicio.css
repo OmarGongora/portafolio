@@ -393,6 +393,7 @@ li{
 }
 .redContacto *{
     font-size: 1.1em;
+    text-align: center;
 }
 .redContacto i{
     font-size: 2em;
@@ -409,7 +410,9 @@ footer{
     align-items: center;
     margin-top: auto;
 }
-
+footer p{
+    text-align: center;
+}
 
 
 
@@ -485,9 +488,10 @@ footer{
     }
     .linkContainer a{
         padding: 20px 50px 20px 20px;
+        margin-left: -1em;
     }
     .navActive{
-        height: 100vh;
+        height: 40vh;
     }
 
 
@@ -514,6 +518,13 @@ footer{
     }
     .habilidadesContainer{
         flex-direction: column;
+    }
+
+    .hBlandas{
+        transition: 1s all ease-in-out;
+    }
+    .hBlandas:hover{
+        left: -50px;
     }
 
     

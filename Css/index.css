@@ -1,9 +1,11 @@
 :root{
-    --gris:#2c2323;
-    --rojoO:#B52003;
+    --fondo:rgb(39, 25, 22);
+    --secundario:#E06E57;
+    --terciario:#35211d;
+    --letra:#F3F2F1;
+    --rojoO:rgb(141, 37, 16);
     --rojo:#E22600;
-    --bone:#ECE2D0;
-    --blanco:#fafafa;
+    --amarillo:#c9c501;
 }
 
 *{
@@ -11,10 +13,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
 }
 
 body{
-    background-color: var(--gris);
+    background-color: var(--fondo);
 }
 
 
@@ -37,10 +40,10 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    outline: red solid 1px;
 }
 .languageSelection h1{
-    color:var(--blanco);
+    color:var(--letra);
+    text-align: center;
 }
 
 .flagsContainer{
